@@ -32,6 +32,16 @@ angular.module('ng-patterns',[])
                                    .attr('fill', getColour());
                         }
                     }
+
+                if(options[0].text){
+                    var text = squareSvg
+                        .append("text")
+                        .attr("x", '15%')
+                        .attr("y", '85%')
+                        .style("font-size", parseInt(height.replace('px','')))
+                        .attr("fill", "#ffffff")
+                        .text(options[0].text[0].toUpperCase());
+                }
                 function getSize(){
                     if(options[0].seed){
                         return options[0].seed.length;

@@ -1,30 +1,72 @@
 'use strict';
 angular.module('appTest', ['ng-patterns'])
     .controller('appTestController', ['$scope', function ($scope) {
-        $scope.test1 = [
+
+        $scope.n = [
             {
                 'size': 50,
-                'seed': 'supercalifragilistico',
+                'text': 'N',
                 'colors': ['#e62aa2', '#f0b988']
             }
         ];
-        $scope.test2 = [
+        $scope.g = [
             {
-                'size': 3,
-                'colors': ['#78f03d', '#f03d78', '#f0e13d']
+                'size': 10,
+                'text': 'G',
+                'colors': ['#3ce5a7', '#3cb7e5', '#e53c90']
             }
         ];
-        $scope.test3 = [
+        $scope.p = [
             {
                 'size': 15,
+                'text': 'P',
                 'colors': ['#7ec3f1', '#084974']
             }
         ];
-        $scope.test4 = [
+        $scope.a = [
             {
-                'size': 2,
-                'colors': ['#cccbc1', '#979794', '#181816']
+                'size': 15,
+                'text': 'A',
+                'colors': ['#f21a70', '#df3ce5', '#f9bb69']
+            }
+        ];
+        $scope.t = [
+            {
+                'size': 25,
+                'text': 'T',
+                'colors': ['#f21a70', '#2fd6d4', '#f9bb69']
             }
         ];
 
+        $scope.e = [
+            {
+                'size': 10,
+                'text': 'E',
+                'colors': ['#f969e0', '#2fd6d4', '#f9bb69']
+            }
+        ];
+
+        $scope.r = [
+            {
+                'size': 5,
+                'text': 'R',
+                'colors': ['#f21a70', '#2fd6d4', '#f9bb69']
+            }
+        ];
+
+        $scope.n = [
+            {
+                'size': 12,
+                'text': 'N',
+                'colors': ['#f21a70', '#e5893c', '#f9bb69']
+            }
+        ];
+
+        $scope.s = [
+            {
+                'size': 15,
+                'text': 'S',
+                'colors': ['#f21a70', '#2fd6d4', '#e53c90']
+            }
+        ];
     }]);
