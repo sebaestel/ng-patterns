@@ -1,4 +1,5 @@
 # ng-pattern
+![alt tag](http://res.cloudinary.com/dfnwoj5c8/image/upload/v1454818162/Captura_de_pantalla_2016-02-07_a_las_1.08.56_gt0ph9.png)
 Angular directive to create basic patterns using d3
 
 ## Install
