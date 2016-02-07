@@ -6,20 +6,20 @@ Angular directive to create basic patterns using d3
 - Clone repository
 
 ```
-git clone git@github.com:sebaduran/ng-pattern.git
+git clone git@github.com:sebaestel/ng-patterns.git
 ```
 
 or use bower
 
 ```
-bower install ng-pattern
+bower install ng-patterns
 ```
 
 ## Usage
 
 Add dependencie in your  module
 ```
-angular.module('yourModule', ['ng-pattern']) ...
+angular.module('yourModule', ['ng-patterns']) ...
 
 ```
 In view
