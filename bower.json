@@ -1,0 +1,27 @@
+{
+    "name": "ng-patterns",
+    "homepage": "https://github.com/sebaestel/ng-patterns",
+    "authors": [
+        "Sebastian Duran <yo@sebaduran.com>"
+    ],
+    "description": "Basic patterns to user avatars",
+    "main": "",
+    "moduleType": [],
+    "keywords": [
+        "chart"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.4.9",
+        "d3": "~3.5.14",
+        "jquery": "~2.2.0",
+        "chroma-js": "~1.1.1"
+    }
+}
