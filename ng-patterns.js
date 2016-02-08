@@ -1,21 +1,22 @@
 'use strict';
 angular.module('ng-patterns',[])
-    .directive('pattern', function () {
+    .directive('pattern', ['$document', function ($document) {
         return {
-            strict: 'E',
+            strict: 'EA',
             transclude: true,
             link: function (scope, element, attributes){
+
                 var target  = '#' + element.attr('id'),
-                    options = jQuery.parseJSON(attributes.patternOptions),
-                    width   = $(target).css('width'),
-                    height  = $(target).css('height'),
+                    options = angular.fromJson(attributes.patternOptions),
+                    width   = $document[0].querySelector(target).clientWidth,
+                    height  = $document[0].querySelector(target).clientHeight,
                     colors = chroma.scale(options[0].colors).colors(options[0].size),
                     color,
                     comlumnIndex,
                     rowIndex,
                     pixelWidth = getSize(),
-                    columns = parseInt(width.replace('px','')) / pixelWidth,
-                    rows = parseInt(height.replace('px','')) / pixelWidth,
+                    columns = parseInt(width) / pixelWidth,
+                    rows = parseInt(height) / pixelWidth,
                     squareSvg = d3.select(target)
                         .append('svg')
                         .attr('width', width)
@@ -38,7 +39,7 @@ angular.module('ng-patterns',[])
                         .append("text")
                         .attr("x", '15%')
                         .attr("y", '85%')
-                        .style("font-size", parseInt(height.replace('px','')))
+                        .style("font-size", parseInt(height))
                         .attr("fill", "#ffffff")
                         .text(options[0].text[0].toUpperCase());
                 }
@@ -55,4 +56,4 @@ angular.module('ng-patterns',[])
                 return false
             }
         };
-    });
+    }]);
